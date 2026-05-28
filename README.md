@@ -37,3 +37,4 @@ IPE is designed for users exporting their own account data. It does not store cr
 - Privacy policy draft: `PRIVACY_POLICY.md`
 - Chrome Store listing draft: `STORE_LISTING.md`
 - Deployment checklist: `DEPLOYMENT.md`
+- Current launch status: `LAUNCH_STATUS.md`
