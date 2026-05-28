@@ -1,0 +1,30 @@
+{
+  "name": "indeed-profile-exporter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Chrome MV3 extension for exporting your own Indeed profile locally.",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "preview": "vite preview --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build",
+    "package:chrome": "npm run build && powershell -NoProfile -ExecutionPolicy Bypass -File scripts/package-chrome.ps1",
+    "test:extension": "playwright test tests/ipe-extension.spec.ts"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.1.1",
+    "vite": "^7.2.4",
+    "typescript": "^5.9.3",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "lucide-react": "^0.554.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/chrome": "^0.1.33",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3"
+  }
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="IPE icon">
+  <defs>
+    <linearGradient id="ring" x1="16" y1="16" x2="112" y2="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2f8dff"/>
+      <stop offset="0.52" stop-color="#045bff"/>
+      <stop offset="1" stop-color="#00b871"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="36%" r="70%">
+      <stop offset="0" stop-color="#243247"/>
+      <stop offset="1" stop-color="#08111f"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0052ff" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#0a1320"/>
+  <circle cx="64" cy="64" r="48" fill="none" stroke="url(#ring)" stroke-width="10" filter="url(#shadow)"/>
+  <circle cx="64" cy="64" r="36" fill="url(#core)" stroke="#1b5fff" stroke-width="2"/>
+  <text x="64" y="73" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800" letter-spacing="0" fill="#ffffff">IPE</text>
+  <path d="M93 39a37 37 0 0 1 8 21" fill="none" stroke="#2effa4" stroke-width="5" stroke-linecap="round"/>
+</svg>
