@@ -28,6 +28,8 @@ IPE supports:
 
 IPE is designed for users exporting their own account data. It does not bypass login, scrape private accounts, store credentials, or send profile data to a server.
 
+Disclaimer: IPE is an independent tool and is not affiliated with, endorsed by, or sponsored by Indeed.
+
 ## Category
 
 Productivity

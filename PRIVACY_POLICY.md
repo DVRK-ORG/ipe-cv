@@ -44,3 +44,7 @@ IPE does not retain exported profile data in a remote system. Extension options 
 For support or privacy questions, use the project repository at:
 
 https://github.com/DVRK-ORG/ipe-cv
+
+## Disclaimer
+
+IPE is an independent tool and is not affiliated with, endorsed by, or sponsored by Indeed.

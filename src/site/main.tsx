@@ -264,7 +264,7 @@ function OpenSource() {
   return (
     <section className="open-source">
       <div>
-        <h2>Prepared for Chrome Store and Cloudflare</h2>
+        <h2>Prepared for Chrome Web Store and Cloudflare</h2>
         <p>
           The project can live in DVRK-ORG with the extension, landing page, privacy policy, and release checklist in one
           repo. Cloudflare Pages can deploy the website from the same production build.
@@ -283,10 +283,10 @@ function FinalCta() {
     <section className="final-cta" id="chrome-store">
       <img src="/icons/ipe128.png" alt="" />
       <h2>Ready for the public launch path</h2>
-      <p>Package the extension, submit the Chrome Store listing, and point ipe-cv.com to the Cloudflare Pages deploy.</p>
+      <p>Package the extension, submit the Chrome Web Store listing, and point ipe-cv.com to the Cloudflare Pages deploy.</p>
       <a className="primary-link" href={chromeStoreUrl}>
         <Chrome size={22} />
-        <span>Chrome Store coming next</span>
+        <span>Chrome Web Store coming next</span>
         <ArrowRight size={20} />
       </a>
     </section>
@@ -303,7 +303,7 @@ function App() {
       <FormatDemo />
       <OpenSource />
       <FinalCta />
-      <footer className="site-footer">
+      <footer className="site-footer" style={{ flexWrap: "wrap", rowGap: "12px" }}>
         <div>
           <img src="/icons/ipe32.png" alt="" />
           <span>IPE</span>
@@ -311,6 +311,9 @@ function App() {
         <a href="/privacy/">Privacy Policy</a>
         <a href={githubUrl}>GitHub</a>
         <span>2026 DVRK ORG</span>
+        <div style={{ flexBasis: "100%", textAlign: "center", fontSize: "11px", opacity: 0.65, marginTop: "8px" }}>
+          IPE is an independent tool and is not affiliated with, endorsed by, or sponsored by Indeed.
+        </div>
       </footer>
     </main>
   );

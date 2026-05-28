@@ -66,9 +66,12 @@ function PrivacyPage() {
           </article>
         ))}
       </section>
-      <footer className="site-footer policy-footer">
+      <footer className="site-footer policy-footer" style={{ flexWrap: "wrap", rowGap: "12px" }}>
         <span>Generated for Indeed Profile Exporter</span>
         <a href="https://github.com/DVRK-ORG/ipe-cv">GitHub</a>
+        <div style={{ flexBasis: "100%", textAlign: "center", fontSize: "11px", opacity: 0.65, marginTop: "8px" }}>
+          IPE is an independent tool and is not affiliated with, endorsed by, or sponsored by Indeed.
+        </div>
       </footer>
     </main>
   );

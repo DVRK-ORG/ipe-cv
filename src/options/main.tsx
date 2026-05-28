@@ -22,7 +22,6 @@ type ToggleKey = keyof Pick<
   | "includeResumeCard"
   | "includeContactDetails"
   | "includeJobPreferences"
-  | "privacyLocalOnly"
 >;
 
 const behaviorRows: Array<{ key: ToggleKey; title: string; body: string }> = [
@@ -58,11 +57,6 @@ const includeRows: Array<{ key: ToggleKey; title: string; body: string }> = [
     key: "includeJobPreferences",
     title: "Include job preferences",
     body: "Export job preferences and settings"
-  },
-  {
-    key: "privacyLocalOnly",
-    title: "Privacy local only",
-    body: "Keep the local-only privacy notice enabled"
   }
 ];
 

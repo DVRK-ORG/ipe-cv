@@ -43,7 +43,7 @@ ipe-cv.com
 www.ipe-cv.com
 ```
 
-## Chrome Store Package
+## Chrome Web Store Package
 
 Before submitting to the Chrome Web Store:
 
@@ -62,7 +62,7 @@ npm run package:chrome
 
 The ZIP is written to `releases/`.
 
-## Chrome Store Assets
+## Chrome Web Store Assets
 
 Prepare:
 

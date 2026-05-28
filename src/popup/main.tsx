@@ -52,18 +52,18 @@ const demoPayload = (): ProfileExportPayload => ({
     pageTitle: "Indeed Profile"
   },
   profile: {
-    name: "Abdulla Ajlan",
-    initials: "AA",
+    name: "Alex Morgan",
+    initials: "AM",
     contact: {
-      email: "abdulla@aajlan.net",
-      phone: "+973 6669 9553",
-      location: "Bahrain (Open to UAE)",
-      lines: ["abdulla@aajlan.net", "+973 6669 9553", "Bahrain (Open to UAE)"]
+      email: "alex@example.com",
+      phone: "+1 555 0100",
+      location: "Sample City, Country",
+      lines: ["alex@example.com", "+1 555 0100", "Sample City, Country"]
     },
     visibility: "Employers can find you"
   },
   resume: {
-    title: "Abdulla Ajlan - Senior HSSE and Security Executive.pdf",
+    title: "Alex Morgan - Sample Resume.pdf",
     added: "Added today",
     fileType: "PDF",
     text: "Resume card captured from the visible Indeed profile."
@@ -81,7 +81,7 @@ const demoPayload = (): ProfileExportPayload => ({
     }
   ],
   rawText:
-    "Abdulla Ajlan\nabdulla@aajlan.net\n+973 6669 9553\nBahrain (Open to UAE)\nEmployers can find you\nResume\nQualifications"
+    "Alex Morgan\nalex@example.com\n+1 555 0100\nSample City, Country\nEmployers can find you\nResume\nQualifications"
 });
 
 const statusFallback = (): IpeStatus => ({
@@ -236,6 +236,10 @@ function PopupApp() {
       }
 
       markStep("create", "done");
+      if (options.minimizeAfterExport) {
+        await delay(800);
+        window.close();
+      }
     } catch (error) {
       markStep("create", "error");
       setNotice(error instanceof Error ? error.message : "IPE export failed.");

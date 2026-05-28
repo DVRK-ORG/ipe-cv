@@ -38,6 +38,11 @@ const load = async (): Promise<void> => {
   iframe.srcdoc = html;
   root.replaceChildren(iframe);
 
+  // Clean up the temporary storage key now that the HTML has been loaded into the iframe
+  chrome.storage.local.remove(key).catch((error) => {
+    console.error("Failed to clean up print preview storage:", error);
+  });
+
   iframe.addEventListener("load", () => {
     if (shouldPrint) {
       window.setTimeout(() => {

@@ -112,7 +112,7 @@ const clickIfClosed = async (element: Element): Promise<boolean> => {
   const label = normalize(element.getAttribute("aria-label")).toLowerCase();
   const isDisclosure =
     expanded === "false" ||
-    /expand|show more|show all|show less|\bmore\b/i.test(`${text} ${label}`);
+    /expand|show more|show all|\bmore\b/i.test(`${text} ${label}`);
 
   const isUnsafe =
     /delete|remove|upload|download|sign out|post job|employers|message|notification|menu|share|report|block/i.test(
@@ -349,12 +349,21 @@ const expandSections = async (options: IpeOptions): Promise<number> => {
   return expanded;
 };
 
+const isIndeedProfilePage = (): boolean => {
+  if (!isIndeedHost()) return false;
+  const isProfileHost = location.hostname.startsWith("profile.indeed.");
+  const isProfilePath = location.pathname.startsWith("/profile");
+  const hasProfileHeading = !!document.querySelector("main h1, h1, [class*='profile' i]");
+  return (isProfileHost || isProfilePath) && hasProfileHeading;
+};
+
 const getStatus = (): IpeStatus => {
   const isIndeed = isIndeedHost();
+  const ready = isIndeedProfilePage();
   return {
     isIndeed,
-    ready: isIndeed,
-    reason: isIndeed ? "You're on your own profile page." : "Open your own Indeed profile page to export.",
+    ready,
+    reason: ready ? "You're on your own profile page." : "Open your own Indeed profile page to export.",
     url: location.href,
     title: document.title
   };
