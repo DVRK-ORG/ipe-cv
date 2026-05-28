@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/icons/ipe128.png" alt="Indeed Profile Exporter (IPE) Logo" width="128" height="128" />
+</p>
+
 # Indeed Profile Exporter (IPE)
 
 **IPE** is a local-first Chrome Manifest V3 extension that helps users export their own visible Indeed profile data as clean **HTML**, **JSON**, or browser **print-to-PDF** output.

@@ -272,7 +272,7 @@ function OpenSource() {
       </div>
       <a className="secondary-link light" href={githubUrl}>
         <Github size={22} />
-        <span>Open repository</span>
+        <span>Open GitHub repository</span>
       </a>
     </section>
   );
