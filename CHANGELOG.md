@@ -15,6 +15,20 @@ IPE is a local-first Chrome Manifest V3 extension that helps users export their 
 - Chrome Web Store status: submitted for review.
 - Launch strategy: freeze the submitted extension package until Chrome Web Store review responds.
 
+## [Unreleased] - 2026-05-28
+
+### Search Appearance
+
+- Promoted the site favicon from a small browser-tab asset to a Google-search-friendly brand asset.
+- Added explicit favicon declarations for:
+  - `96x96` PNG
+  - `48x48` PNG
+  - root `favicon.ico`
+  - `180x180` Apple touch icon
+- Added canonical URLs to the landing page and privacy page.
+- Added social preview image metadata to improve link previews.
+- Kept this as a website-only change so the Chrome Web Store submission package remains frozen.
+
 ## [1.0.0] - 2026-05-28
 
 ### Project Created
