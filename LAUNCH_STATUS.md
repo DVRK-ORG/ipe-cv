@@ -18,20 +18,26 @@ Last updated: May 28, 2026
 
 ## Custom Domains
 
-Attached to Cloudflare Pages and pending validation:
+Attached to Cloudflare Pages and serving over HTTPS:
 
-- `ipe-cv.com`
-- `www.ipe-cv.com`
+- https://ipe-cv.com
+- https://www.ipe-cv.com
+- https://ipe-cv.com/privacy/
 
-Current blocker: the API token available to Codex can manage Pages but cannot create Cloudflare zones. Create the `ipe-cv.com` zone in the Cloudflare dashboard or grant a token with `Zone:Create` for the account.
+Zone status:
 
-Recommended DNS path:
+- Zone: `ipe-cv.com`
+- Status: active
+- Nameservers: `ivan.ns.cloudflare.com`, `jo.ns.cloudflare.com`
+- DNS:
+  - `CNAME @ -> ipe-cv.pages.dev`
+  - `CNAME www -> ipe-cv.pages.dev`
 
-1. Add `ipe-cv.com` as a full zone in Cloudflare.
-2. Copy the Cloudflare nameservers.
-3. Update the domain nameservers at Spaceship.
-4. Wait for Cloudflare zone activation.
-5. Confirm the Pages custom domains move from pending to active.
+Verification:
+
+- `https://ipe-cv.com/` returned `200` with title `IPE - Indeed Profile Exporter`.
+- `https://www.ipe-cv.com/` returned `200` with title `IPE - Indeed Profile Exporter`.
+- `https://ipe-cv.com/privacy/` returned `200` with title `Privacy Policy - IPE`.
 
 ## Chrome Web Store
 
@@ -39,12 +45,4 @@ Recommended DNS path:
 - Latest local package: `releases/ipe-chrome-v1.0.0.zip`
 - Listing draft: `STORE_LISTING.md`
 - Privacy policy source: `PRIVACY_POLICY.md`
-- Live privacy URL after Cloudflare Pages deploy: `https://ipe-cv.pages.dev/privacy/`
-
-After `ipe-cv.com` activates, use:
-
-```text
-https://ipe-cv.com/privacy/
-```
-
-as the Chrome Web Store privacy policy URL.
+- Chrome Web Store privacy policy URL: `https://ipe-cv.com/privacy/`
