@@ -140,7 +140,7 @@ The packaged `.zip` is created in the `releases/` folder, ready for upload to th
     <td align="center" width="120"><img src="https://cdn.simpleicons.org/vite/646cff" width="28" /><br /><strong>Vite 7</strong></td>
     <td align="center" width="120"><img src="https://cdn.simpleicons.org/googlechrome/4285f4" width="28" /><br /><strong>Chrome MV3</strong></td>
     <td align="center" width="120"><img src="https://cdn.simpleicons.org/playwright/2ead33" width="28" /><br /><strong>Playwright</strong></td>
-    <td align="center" width="120"><img src="https://cdn.simpleicons.org/cloudflarepages/f38020" width="28" /><br /><strong>Cloudflare</strong></td>
+    <td align="center" width="120">☁️<br /><strong>Cloudflare Pages</strong></td>
   </tr>
 </table>
 
