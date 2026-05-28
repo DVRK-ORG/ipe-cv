@@ -39,6 +39,10 @@ Host permissions are limited to Indeed domains.
 
 IPE does not retain exported profile data in a remote system. Extension options are stored locally in Chrome storage. Print previews may temporarily store generated HTML in local Chrome extension storage so the print page can open.
 
+## Website Analytics
+
+The IPE website may use Cloudflare Web Analytics to understand aggregated page traffic. This website analytics is separate from the Chrome extension and is not used to collect exported profile data.
+
 ## Contact
 
 For support or privacy questions, use the project repository at:
