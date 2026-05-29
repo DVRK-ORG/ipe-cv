@@ -23,6 +23,7 @@ IPE is a local-first Chrome Manifest V3 extension that helps users export their 
 - Updated the landing page CTA links to the published Chrome Web Store listing.
 - Replaced pending-review language with live install copy.
 - Added the published Chrome Web Store URL to public launch docs.
+- Updated external landing and privacy page links to open in a new browser tab.
 - Kept this as a website and documentation update only; no extension package was regenerated.
 
 ### Search Appearance

@@ -20,6 +20,10 @@ type ExportFormat = "HTML" | "JSON" | "PDF";
 
 const chromeStoreUrl = "https://chromewebstore.google.com/detail/indeed-profile-exporter/lkhmkglminhfjhellfidjjfaknekfkbm";
 const githubUrl = "https://github.com/DVRK-ORG/ipe-cv";
+const externalLinkProps = {
+  target: "_blank",
+  rel: "noopener noreferrer"
+} as const;
 
 const workflow = [
   {
@@ -71,9 +75,11 @@ function Header() {
         <a href="#features">Features</a>
         <a href="/privacy/">Privacy</a>
         <a href="#demo">Demo</a>
-        <a href={githubUrl}>GitHub</a>
+        <a href={githubUrl} {...externalLinkProps}>
+          GitHub
+        </a>
       </nav>
-      <a className="header-action" href={chromeStoreUrl}>
+      <a className="header-action" href={chromeStoreUrl} {...externalLinkProps}>
         <Chrome size={18} />
         <span>Install on Chrome Web Store</span>
       </a>
@@ -146,11 +152,11 @@ function Hero() {
           inside your browser.
         </p>
         <div className="hero-actions">
-          <a className="primary-link" href={chromeStoreUrl}>
+          <a className="primary-link" href={chromeStoreUrl} {...externalLinkProps}>
             <Chrome size={22} />
             <span>Install on Chrome Web Store</span>
           </a>
-          <a className="secondary-link" href={githubUrl}>
+          <a className="secondary-link" href={githubUrl} {...externalLinkProps}>
             <Github size={22} />
             <span>View on GitHub</span>
           </a>
@@ -270,7 +276,7 @@ function OpenSource() {
           repo. Cloudflare Pages can deploy the website from the same production build.
         </p>
       </div>
-      <a className="secondary-link light" href={githubUrl}>
+      <a className="secondary-link light" href={githubUrl} {...externalLinkProps}>
         <Github size={22} />
         <span>Open GitHub repository</span>
       </a>
@@ -284,7 +290,7 @@ function FinalCta() {
       <img src="/icons/ipe128.png" alt="" />
       <h2>Install IPE from the Chrome Web Store</h2>
       <p>IPE is approved, published, and ready to help you export your own visible Indeed profile locally.</p>
-      <a className="primary-link" href={chromeStoreUrl}>
+      <a className="primary-link" href={chromeStoreUrl} {...externalLinkProps}>
         <Chrome size={22} />
         <span>Install on Chrome Web Store</span>
         <ArrowRight size={20} />
@@ -309,7 +315,9 @@ function App() {
           <span>IPE</span>
         </div>
         <a href="/privacy/">Privacy Policy</a>
-        <a href={githubUrl}>GitHub</a>
+        <a href={githubUrl} {...externalLinkProps}>
+          GitHub
+        </a>
         <span>2026 DVRK ORG</span>
         <div style={{ flexBasis: "100%", textAlign: "center", fontSize: "11px", opacity: 0.65, marginTop: "8px" }}>
           IPE is an independent tool and is not affiliated with, endorsed by, or sponsored by Indeed.

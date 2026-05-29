@@ -3,6 +3,11 @@ import { createRoot } from "react-dom/client";
 import { ArrowLeft, Download, FileText, Lock, ShieldCheck } from "lucide-react";
 import "../site/site.css";
 
+const externalLinkProps = {
+  target: "_blank",
+  rel: "noopener noreferrer"
+} as const;
+
 const sections = [
   {
     title: "Data processing",
@@ -73,7 +78,9 @@ function PrivacyPage() {
       </section>
       <footer className="site-footer policy-footer" style={{ flexWrap: "wrap", rowGap: "12px" }}>
         <span>Generated for Indeed Profile Exporter</span>
-        <a href="https://github.com/DVRK-ORG/ipe-cv">GitHub</a>
+        <a href="https://github.com/DVRK-ORG/ipe-cv" {...externalLinkProps}>
+          GitHub
+        </a>
         <div style={{ flexBasis: "100%", textAlign: "center", fontSize: "11px", opacity: 0.65, marginTop: "8px" }}>
           IPE is an independent tool and is not affiliated with, endorsed by, or sponsored by Indeed.
         </div>
