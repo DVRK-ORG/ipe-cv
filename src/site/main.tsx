@@ -18,7 +18,7 @@ import "../site/site.css";
 
 type ExportFormat = "HTML" | "JSON" | "PDF";
 
-const chromeStoreUrl = "#chrome-store";
+const chromeStoreUrl = "https://chromewebstore.google.com/detail/indeed-profile-exporter/lkhmkglminhfjhellfidjjfaknekfkbm";
 const githubUrl = "https://github.com/DVRK-ORG/ipe-cv";
 
 const workflow = [
@@ -75,7 +75,7 @@ function Header() {
       </nav>
       <a className="header-action" href={chromeStoreUrl}>
         <Chrome size={18} />
-        <span>Add to Chrome</span>
+        <span>Install on Chrome Web Store</span>
       </a>
     </header>
   );
@@ -148,7 +148,7 @@ function Hero() {
         <div className="hero-actions">
           <a className="primary-link" href={chromeStoreUrl}>
             <Chrome size={22} />
-            <span>Add to Chrome</span>
+            <span>Install on Chrome Web Store</span>
           </a>
           <a className="secondary-link" href={githubUrl}>
             <Github size={22} />
@@ -282,11 +282,11 @@ function FinalCta() {
   return (
     <section className="final-cta" id="chrome-store">
       <img src="/icons/ipe128.png" alt="" />
-      <h2>Ready for the public launch path</h2>
-      <p>Package the extension, submit the Chrome Web Store listing, and point ipe-cv.com to the Cloudflare Pages deploy.</p>
+      <h2>Install IPE from the Chrome Web Store</h2>
+      <p>IPE is approved, published, and ready to help you export your own visible Indeed profile locally.</p>
       <a className="primary-link" href={chromeStoreUrl}>
         <Chrome size={22} />
-        <span>Chrome Web Store coming next</span>
+        <span>Install on Chrome Web Store</span>
         <ArrowRight size={20} />
       </a>
     </section>

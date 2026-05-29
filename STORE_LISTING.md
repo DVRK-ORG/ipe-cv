@@ -42,6 +42,10 @@ English
 
 https://ipe-cv.com
 
+## Published Chrome Web Store URL
+
+https://chromewebstore.google.com/detail/indeed-profile-exporter/lkhmkglminhfjhellfidjjfaknekfkbm
+
 ## Privacy Policy
 
 https://ipe-cv.com/privacy

@@ -11,6 +11,7 @@
 <p align="center">
   <a href="https://ipe-cv.com"><img src="https://img.shields.io/badge/🌐_Website-ipe--cv.com-2f8dff?style=for-the-badge" alt="Website" /></a>&nbsp;
   <a href="https://ipe-cv.com/privacy/"><img src="https://img.shields.io/badge/🔒_Privacy-Policy-00b871?style=for-the-badge" alt="Privacy Policy" /></a>&nbsp;
+  <a href="https://chromewebstore.google.com/detail/indeed-profile-exporter/lkhmkglminhfjhellfidjjfaknekfkbm"><img src="https://img.shields.io/badge/Chrome_Web_Store-Install-4285f4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Install on Chrome Web Store" /></a>&nbsp;
   <a href="https://github.com/DVRK-ORG/ipe-cv/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-f5a623?style=for-the-badge" alt="License" /></a>
 </p>
 
@@ -181,6 +182,7 @@ ipe-cv/
 
 | | Link |
 |---|---|
+| Chrome | [**Install on Chrome Web Store**](https://chromewebstore.google.com/detail/indeed-profile-exporter/lkhmkglminhfjhellfidjjfaknekfkbm) |
 | 🌐 | [**ipe-cv.com**](https://ipe-cv.com) — Landing page |
 | 🔒 | [**Privacy Policy**](https://ipe-cv.com/privacy/) |
 | 🏪 | [`STORE_LISTING.md`](STORE_LISTING.md) — Chrome Web Store listing draft |

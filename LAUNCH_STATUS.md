@@ -1,6 +1,6 @@
 # IPE Launch Status
 
-Last updated: May 28, 2026
+Last updated: May 29, 2026
 
 ## GitHub
 
@@ -41,6 +41,11 @@ Verification:
 
 ## Chrome Web Store
 
+- Status: approved and published
+- Published URL: https://chromewebstore.google.com/detail/indeed-profile-exporter/lkhmkglminhfjhellfidjjfaknekfkbm
+- Item ID: `lkhmkglminhfjhellfidjjfaknekfkbm`
+- Version: `1.0.0`
+- Visibility: public
 - Store ZIP command: `npm run package:chrome`
 - Latest local package: `releases/ipe-chrome-v1.0.0.zip`
 - Listing draft: `STORE_LISTING.md`

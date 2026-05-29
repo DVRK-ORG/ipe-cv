@@ -12,10 +12,18 @@ IPE is a local-first Chrome Manifest V3 extension that helps users export their 
 - Website: `https://ipe-cv.com/`.
 - Privacy policy: `https://ipe-cv.com/privacy/`.
 - Chrome package: `releases/ipe-chrome-v1.0.0.zip`.
-- Chrome Web Store status: submitted for review.
-- Launch strategy: freeze the submitted extension package until Chrome Web Store review responds.
+- Chrome Web Store status: approved and published.
+- Chrome Web Store URL: `https://chromewebstore.google.com/detail/indeed-profile-exporter/lkhmkglminhfjhellfidjjfaknekfkbm`.
+- Launch strategy: keep the published `1.0.0` extension package stable unless a patch release is needed.
 
-## [Unreleased] - 2026-05-28
+## [Unreleased] - 2026-05-29
+
+### Launch Links
+
+- Updated the landing page CTA links to the published Chrome Web Store listing.
+- Replaced pending-review language with live install copy.
+- Added the published Chrome Web Store URL to public launch docs.
+- Kept this as a website and documentation update only; no extension package was regenerated.
 
 ### Search Appearance
 
@@ -198,7 +206,7 @@ IPE is a local-first Chrome Manifest V3 extension that helps users export their 
 - Added first-viewport product positioning:
   - product name and IPE mark
   - local-first export value proposition
-  - Add to Chrome call to action
+  - install call to action
   - View on GitHub call to action
   - extension/product mockup
 - Added website sections for:
@@ -278,6 +286,8 @@ IPE is a local-first Chrome Manifest V3 extension that helps users export their 
 - Attached release asset:
   - `ipe-chrome-v1.0.0.zip`
 - Included release highlights, verification notes, and disclaimer.
+- Published Chrome Web Store URL:
+  - `https://chromewebstore.google.com/detail/indeed-profile-exporter/lkhmkglminhfjhellfidjjfaknekfkbm`
 
 ### GitHub and Cloudflare
 
@@ -364,6 +374,8 @@ IPE is a local-first Chrome Manifest V3 extension that helps users export their 
   - website content
 - Certified required Chrome Web Store data-use statements.
 - Submitted the extension for Chrome Web Store review.
+- Approved and published version `1.0.0` to the Chrome Web Store:
+  - `https://chromewebstore.google.com/detail/indeed-profile-exporter/lkhmkglminhfjhellfidjjfaknekfkbm`
 
 ### Promo and Launch Assets
 
@@ -380,13 +392,13 @@ IPE is a local-first Chrome Manifest V3 extension that helps users export their 
 
 ## Post-Submission Guidance
 
-### Frozen Until Review
+### Published Package
 
-- Do not regenerate or reupload the Chrome Web Store ZIP unless review asks for changes.
-- Treat `releases/ipe-chrome-v1.0.0.zip` as the submitted source of truth.
-- Safe work while waiting:
-  - monitor Chrome Developer Dashboard
-  - monitor email
+- Do not regenerate or reupload the Chrome Web Store ZIP unless a patch release is intentionally prepared.
+- Treat `releases/ipe-chrome-v1.0.0.zip` as the published `1.0.0` source of truth.
+- Safe post-approval work:
+  - monitor Chrome Web Store listing health
+  - monitor support email
   - monitor Google and Bing indexing
   - monitor Cloudflare Web Analytics
   - prepare Product Hunt launch materials privately
@@ -395,9 +407,8 @@ IPE is a local-first Chrome Manifest V3 extension that helps users export their 
 
 ### Product Hunt Decision
 
-- Product Hunt launch is intentionally delayed until Chrome Web Store approval.
-- Reason: the strongest launch CTA is the live install URL, not a pending-review state.
-- After approval, update the landing page CTA and README badge with the final Chrome Web Store URL before launching publicly.
+- Product Hunt launch can now use the live Chrome Web Store install URL.
+- Use the published listing as the primary CTA for public launch materials.
 
 ## Maintenance Notes
 
