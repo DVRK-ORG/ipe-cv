@@ -117,13 +117,48 @@ nav a:hover {
   min-height: 44px;
   border-radius: 8px;
   font-weight: 850;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .header-action,
 .primary-link {
   padding: 0 18px;
   background: var(--blue);
-  box-shadow: 0 16px 34px rgba(11, 92, 255, 0.34);
+  box-shadow: 0 12px 28px rgba(11, 92, 255, 0.25);
+}
+
+.header-action::after,
+.primary-link::after,
+.popup-preview button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+}
+
+.header-action:hover::after,
+.primary-link:hover::after,
+.popup-preview button:hover::after {
+  left: 150%;
+  transition: left 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.header-action:hover,
+.primary-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(11, 92, 255, 0.45);
+  background: #236fff;
 }
 
 .secondary-link {
@@ -133,10 +168,22 @@ nav a:hover {
   background: rgba(255, 255, 255, 0.055);
 }
 
+.secondary-link:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.095);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
 .secondary-link.light {
   background: var(--paper);
   color: #0c1420;
   border-color: transparent;
+}
+
+.secondary-link.light:hover {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .hero {
@@ -156,6 +203,10 @@ nav a:hover {
   font-size: clamp(40px, 6vw, 68px);
   line-height: 1.05;
   letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #ffffff 40%, #2f87ff 75%, #5cf4ce 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-copy p,
@@ -205,6 +256,17 @@ nav a:hover {
   min-height: 580px;
 }
 
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 1.1;
+    transform: scale(1.05) translate3d(5px, -5px, 0);
+  }
+}
+
 .hero-visual::before {
   content: "";
   position: absolute;
@@ -212,9 +274,29 @@ nav a:hover {
   border: 1px solid rgba(92, 244, 206, 0.16);
   border-radius: 8px;
   background:
-    linear-gradient(135deg, rgba(11, 92, 255, 0.2), transparent 36%),
+    linear-gradient(135deg, rgba(11, 92, 255, 0.22), transparent 36%),
     rgba(5, 10, 15, 0.56);
   box-shadow: var(--shadow);
+  animation: pulse-glow 12s ease-in-out infinite;
+  filter: blur(1px);
+}
+
+@keyframes float-popup {
+  0%, 100% {
+    transform: translateY(0) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+@keyframes float-doc {
+  0%, 100% {
+    transform: translateY(0) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(-0.5deg);
+  }
 }
 
 .popup-preview,
@@ -223,6 +305,25 @@ nav a:hover {
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: var(--shadow);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.popup-preview {
+  animation: float-popup 7s ease-in-out infinite;
+}
+
+.document-preview {
+  animation: float-doc 9s ease-in-out infinite 0.5s;
+}
+
+.popup-preview:hover {
+  border-color: rgba(11, 92, 255, 0.4);
+  box-shadow: 0 30px 60px rgba(11, 92, 255, 0.15), var(--shadow);
+}
+
+.document-preview:hover {
+  border-color: rgba(92, 244, 206, 0.4);
+  box-shadow: 0 30px 60px rgba(92, 244, 206, 0.1), var(--shadow);
 }
 
 .popup-preview {
@@ -301,6 +402,17 @@ nav a:hover {
   background: var(--blue);
   font: inherit;
   font-weight: 850;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 24px rgba(11, 92, 255, 0.22);
+}
+
+.popup-preview button:hover {
+  transform: translateY(-1px);
+  background: #236fff;
+  box-shadow: 0 14px 30px rgba(11, 92, 255, 0.4);
 }
 
 .checklist {
@@ -429,10 +541,19 @@ nav a:hover {
   grid-template-columns: minmax(260px, 0.8fr) minmax(320px, 1.2fr);
   gap: 32px;
   align-items: center;
-  padding: 26px;
+  padding: 30px;
   border: 1px solid rgba(92, 244, 206, 0.2);
-  border-radius: 8px;
-  background: rgba(7, 22, 18, 0.82);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(7, 22, 18, 0.88) 0%, rgba(3, 10, 15, 0.9) 100%);
+  backdrop-filter: blur(12px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.privacy-band:hover {
+  transform: translateY(-4px);
+  border-color: rgba(92, 244, 206, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(92, 244, 206, 0.08);
 }
 
 .privacy-band div {
@@ -441,6 +562,11 @@ nav a:hover {
 
 .privacy-band svg {
   color: var(--green-2);
+  transition: transform 0.3s ease;
+}
+
+.privacy-band:hover svg {
+  transform: scale(1.15) rotate(5deg);
 }
 
 .privacy-band h2 {
@@ -494,21 +620,41 @@ nav a:hover {
 
 .workflow-step {
   min-height: 255px;
-  padding: 24px;
+  padding: 28px;
   border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.055);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(8px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.workflow-step:hover {
+  transform: translateY(-6px);
+  border-color: rgba(92, 244, 206, 0.35);
+  background: rgba(255, 255, 255, 0.075);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(92, 244, 206, 0.05);
 }
 
 .workflow-step svg {
   margin-top: 32px;
   color: var(--green-2);
+  transition: all 0.3s ease;
+}
+
+.workflow-step:hover svg {
+  transform: scale(1.15) rotate(3deg);
+  filter: drop-shadow(0 0 8px rgba(92, 244, 206, 0.5));
 }
 
 .step-index {
   color: rgba(255, 255, 255, 0.38);
   font-size: 13px;
   font-weight: 850;
+  transition: color 0.3s ease;
+}
+
+.workflow-step:hover .step-index {
+  color: var(--green-2);
 }
 
 .workflow-step h3 {
@@ -562,14 +708,32 @@ nav a:hover {
   background: var(--blue);
 }
 
+@keyframes panel-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .format-panel {
-  padding: 28px;
+  padding: 32px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 12px;
   background:
-    linear-gradient(135deg, rgba(11, 92, 255, 0.16), transparent 46%),
-    rgba(255, 255, 255, 0.06);
+    linear-gradient(135deg, rgba(11, 92, 255, 0.22), transparent 46%),
+    rgba(255, 255, 255, 0.04);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  animation: panel-fade-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: all 0.3s ease;
+}
+
+.format-panel:hover {
+  border-color: rgba(11, 92, 255, 0.3);
 }
 
 .format-title {
@@ -579,6 +743,11 @@ nav a:hover {
 .format-title svg {
   flex: 0 0 auto;
   color: var(--green-2);
+  transition: transform 0.4s ease;
+}
+
+.format-panel:hover .format-title svg {
+  transform: rotate(10deg) scale(1.1);
 }
 
 .format-title h3 {
@@ -608,6 +777,15 @@ nav a:hover {
   color: #dfe8f5;
   background: rgba(0, 0, 0, 0.18);
   font-weight: 750;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.format-panel li:hover {
+  background: rgba(11, 92, 255, 0.1);
+  border-color: rgba(11, 92, 255, 0.2);
+  transform: translateX(4px);
+  color: white;
 }
 
 .format-panel li svg {
@@ -736,17 +914,33 @@ nav a:hover {
 .policy-grid article,
 .policy-content article {
   border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.055);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(8px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .policy-grid article {
-  padding: 22px;
+  padding: 24px;
+}
+
+.policy-grid article:hover,
+.policy-content article:hover {
+  transform: translateY(-4px);
+  border-color: rgba(92, 244, 206, 0.35);
+  background: rgba(255, 255, 255, 0.075);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 25px rgba(92, 244, 206, 0.05);
 }
 
 .policy-grid svg,
 .policy-content svg {
   color: var(--green-2);
+  transition: transform 0.3s ease;
+}
+
+.policy-grid article:hover svg,
+.policy-content article:hover svg {
+  transform: scale(1.15) rotate(5deg);
 }
 
 .policy-grid h2,
@@ -784,18 +978,13 @@ nav a:hover {
   margin-top: 52px;
 }
 
-.primary-link:hover,
-.header-action:hover,
-.secondary-link:hover,
-.format-tabs button:hover {
-  transform: translateY(-1px);
+.format-tabs button {
+  transition: all 0.2s ease;
 }
 
-.primary-link,
-.header-action,
-.secondary-link,
-.format-tabs button {
-  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease;
+.format-tabs button:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -894,6 +1083,8 @@ nav a:hover {
   .document-preview {
     position: relative;
     width: 100%;
+    animation: none !important;
+    transform: none !important;
   }
 
   .document-preview {

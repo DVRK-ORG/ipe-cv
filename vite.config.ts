@@ -11,7 +11,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         site: resolve(__dirname, "index.html"),
-        privacy: resolve(__dirname, "privacy/index.html"),
+        privacy: resolve(__dirname, "privacy.html"),
         popup: resolve(__dirname, "popup.html"),
         options: resolve(__dirname, "options.html"),
         print: resolve(__dirname, "print.html"),

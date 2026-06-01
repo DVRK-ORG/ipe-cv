@@ -73,7 +73,7 @@ function Header() {
       </a>
       <nav aria-label="Primary navigation">
         <a href="#features">Features</a>
-        <a href="/privacy/">Privacy</a>
+        <a href="/privacy">Privacy</a>
         <a href="#demo">Demo</a>
         <a href={githubUrl} {...externalLinkProps}>
           GitHub
@@ -245,7 +245,7 @@ function FormatDemo() {
           ))}
         </div>
       </div>
-      <div className="format-panel">
+      <div className="format-panel" key={active}>
         <div className="format-title">
           <ActiveIcon size={28} />
           <div>
@@ -314,7 +314,7 @@ function App() {
           <img src="/icons/ipe32.png" alt="" />
           <span>IPE</span>
         </div>
-        <a href="/privacy/">Privacy Policy</a>
+        <a href="/privacy">Privacy Policy</a>
         <a href={githubUrl} {...externalLinkProps}>
           GitHub
         </a>

@@ -22,7 +22,7 @@ Attached to Cloudflare Pages and serving over HTTPS:
 
 - https://ipe-cv.com
 - https://www.ipe-cv.com
-- https://ipe-cv.com/privacy/
+- https://ipe-cv.com/privacy
 
 Zone status:
 
@@ -37,7 +37,7 @@ Verification:
 
 - `https://ipe-cv.com/` returned `200` with title `IPE - Indeed Profile Exporter`.
 - `https://www.ipe-cv.com/` returned `200` with title `IPE - Indeed Profile Exporter`.
-- `https://ipe-cv.com/privacy/` returned `200` with title `Privacy Policy - IPE`.
+- `https://ipe-cv.com/privacy` returned `200` with title `Privacy Policy - IPE`.
 
 ## Chrome Web Store
 
@@ -50,4 +50,4 @@ Verification:
 - Latest local package: `releases/ipe-chrome-v1.0.0.zip`
 - Listing draft: `STORE_LISTING.md`
 - Privacy policy source: `PRIVACY_POLICY.md`
-- Chrome Web Store privacy policy URL: `https://ipe-cv.com/privacy/`
+- Chrome Web Store privacy policy URL: `https://ipe-cv.com/privacy`
