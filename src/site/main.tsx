@@ -266,24 +266,6 @@ function FormatDemo() {
   );
 }
 
-function OpenSource() {
-  return (
-    <section className="open-source">
-      <div>
-        <h2>Prepared for Chrome Web Store and Cloudflare</h2>
-        <p>
-          The project can live in DVRK-ORG with the extension, landing page, privacy policy, and release checklist in one
-          repo. Cloudflare Pages can deploy the website from the same production build.
-        </p>
-      </div>
-      <a className="secondary-link light" href={githubUrl} {...externalLinkProps}>
-        <Github size={22} />
-        <span>Open GitHub repository</span>
-      </a>
-    </section>
-  );
-}
-
 function FinalCta() {
   return (
     <section className="final-cta" id="chrome-store">
@@ -307,7 +289,6 @@ function App() {
       <PrivacyBand />
       <Workflow />
       <FormatDemo />
-      <OpenSource />
       <FinalCta />
       <footer className="site-footer" style={{ flexWrap: "wrap", rowGap: "12px" }}>
         <div>
